@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Neon Snake</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="card">
+  <header>
+    <h1>NEON SNAKE</h1>
+    <div class="stats">
+      <div class="stat"><small>SCORE</small><b id="score">0</b></div>
+      <div class="stat"><small>BEST</small><b id="best">0</b></div>
+    </div>
+  </header>
+
+  <div class="board" id="board">
+    <canvas id="cv" aria-label="Snake game board"></canvas>
+    <div class="overlay" id="overlay">
+      <h2 id="ovTitle">NEON SNAKE</h2>
+      <p id="ovText">Eat the glowing orbs. Avoid walls and your own tail.</p>
+      <p class="final" id="ovFinal"></p>
+      <button class="primary" id="ovBtn">START</button>
+    </div>
+  </div>
+
+  <div class="bar">
+    <span class="hint">Arrows / WASD to steer · Space to pause</span>
+    <span id="speedLabel">SPEED 1</span>
+    <button id="pauseBtn" aria-label="Pause or resume">PAUSE</button>
+  </div>
+
+  <div class="dpad" aria-label="Direction controls">
+    <button data-d="up" aria-label="Up">▲</button>
+    <button data-d="left" aria-label="Left">◀</button>
+    <button data-d="right" aria-label="Right">▶</button>
+    <button data-d="down" aria-label="Down">▼</button>
+  </div>
+</main>
+
+<script src="game.js"></script>
+</body>
+</html>
